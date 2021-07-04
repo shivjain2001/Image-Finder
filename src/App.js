@@ -24,6 +24,9 @@ function App() {
         <input type="text" placeholder="Enter Image Title " onChange={(event)=> setQuery(event.target.value)}/>
         <button onClick={search}>Search</button>
       </div>
+      <div className="helper">
+        <h6>*Search keywords like "Car" or "Pizza"</h6>
+      </div>
       <div className="contain">
         {searchQ ? searchData.map((img, key) => (
           <Image src={img.urls.thumb} key={key}/>
